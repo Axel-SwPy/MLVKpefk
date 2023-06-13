@@ -1,0 +1,84 @@
+{% extends 'word/index_same_files.html' %}
+{% load static %}
+
+
+{% block diff_style_same_files %}
+<style>
+    .bar_header{
+        width: 100%;
+        height: 100px;
+        background: #ce4747;
+    }
+    .menu li:hover >ul > li{
+        background: #df7b7b;
+    }
+    .footer{
+    background: #4d1a1a;
+    }
+</style>
+{% endblock %}
+
+    {% block name_same_files_1 %}Головна{% endblock %}
+    {% block name_same_files_2 %}Вступ Access 2010{% endblock %}
+
+    {% block link_same_files_1 %}{% url 'home' %}{% endblock %}
+    {% block link_same_files_2 %}{% url 'entry_access' %}{% endblock %}
+
+{% block practice_same_files %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".submit_value_access").click(function(e) {
+            e.preventDefault();
+            var value = $(this).siblings(".input_form_access").val();
+            $.ajax({
+                type: "GET",
+                url: "{% url 'db_lesson' %}",
+                data: {
+                    'value_access_lesson': value,
+                },
+                success: function(data) {
+                    window.location.href = "{% url 'db_lesson' %}?lesson=" + value;;
+                }
+            });
+        });
+    });
+</script>
+    <li>
+        <input value="1" name="value-practice" readonly class="input_form_access">
+        <button type="button" class="submit_value_access">MS Access урок 1</button>
+    </li>
+    <li>
+        <input value="2" name="value-practice" readonly class="input_form_access">
+        <button type="button" class="submit_value_access">MS Access урок 2</button>
+    </li>
+    <li>
+        <input value="3" name="value-practice" readonly class="input_form_access">
+        <button type="button" class="submit_value_access">MS Access урок 3</button>
+    </li>
+    <li>
+        <input value="4" name="value-practice" readonly class="input_form_access">
+        <button type="button" class="submit_value_access">MS Access урок 4</button>
+    </li>
+    <li>
+        <input value="5" name="value-practice" readonly class="input_form_access">
+        <button type="button" class="submit_value_access">MS Access урок 5</button>
+    </li>
+    <li>
+        <input value="6" name="value-practice" readonly class="input_form_access">
+        <button type="button" class="submit_value_access">MS Access урок 6</button>
+    </li>
+    <li>
+        <input value="7" name="value-practice" readonly class="input_form_access">
+        <button type="button" class="submit_value_access">MS Access урок 7</button>
+    </li>
+    <li>
+        <input value="8" name="value-practice" readonly class="input_form_access">
+        <button type="button" class="submit_value_access">MS Access урок 8</button>
+    </li>
+    <li>
+        <input value="9" name="value-practice" readonly class="input_form_access">
+        <button type="button" class="submit_value_access">MS Access урок 9</button>
+    </li>
+{% endblock %}

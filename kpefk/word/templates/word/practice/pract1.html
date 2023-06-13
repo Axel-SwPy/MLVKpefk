@@ -1,0 +1,66 @@
+{% extends 'word/index_word.html' %}
+{% load static %}
+
+
+{% block title_same_files %}{{practs.practice_name}}{% endblock %}
+
+
+{% block content_same_files %}
+<div class="container">
+    <div class="grid_buttons">
+        <div class="grid_but"><a href=""> Приклад виконання</a></div>
+        <div class="grid_but" id="control_quest" value="{{main_cont_id}}"><a href="{% url 'word_questions' %}"
+                                                                            hx-get="{% url 'word_questions' %}"
+                                                                            hx-target="#content_data_block"
+                                                                            hx-push-url="true">Контрольні запитання</a></div>
+        <div class="grid_but"><a href="{% url 'word' %}/{{random_variant}}#UNIC_IMG">Варіанти</a></div>
+    </div>
+    <div class="block">
+        <div class="intro_content">
+            {% for prac_info in practice_per_id %}
+                <div class="title"><b>Мета роботи:<br>{{prac_info.title_practice}}</b></div><br>
+                Завдання:
+                {% autoescape off %}
+                <ol>
+                    <div class="task_test">{{prac_info.task}}</div>
+                </ol>
+                {% endautoescape %}
+            {% endfor %}
+        </div>
+    </div>
+
+    {% for explain_information in cont_all_page %}
+    {% autoescape off %}
+    <div class="block">
+        <div class="intro_content">
+            <div class="explain_text_word_practice">{{explain_information.title_name}}</div><br>
+            {% if explain_information.photo_word_cont %}
+                <img class="explain_photo_word_practice" src="{{explain_information.photo_word_cont.url}}" alt="">
+            {% endif %}
+
+        </div>
+    </div>
+    {% endautoescape %}
+    {% endfor%}
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('#control_quest').click(function() {
+        var pract_select_per_id = $(this).attr('value');
+        $.ajax({
+            type: 'GET',
+            url: '/word/practice/controlquestions',
+            data: {
+                'pract_select': pract_select_per_id,
+            },
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(xhr, textStatus, errorThrown) {
+                console.log('Error:', errorThrown);
+            },
+        });
+    });
+</script>
+
+{% endblock %}

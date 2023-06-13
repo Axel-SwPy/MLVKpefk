@@ -1,0 +1,76 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+
+{% block main_title %}Головна{% endblock %}
+
+{% block main_cont %} 
+<div class="view_content">
+    <div class="first_block">
+        <div class="circle_1"></div>
+        <div class="circle_2"></div>
+        <div class="container">
+            <div class="photo_shadow"></div>
+            <div class="photo"><img src="{% static 'main/img/portfolio_.png' %}" alt=""></div>
+            <div class="main_info">
+                <b>LUDMILA MELESCHUK</b><br><br>
+                <p>Сайт викладача фахової передвищої освіти</p><br>
+                <div class="button"><a href="{% url 'teacher' %}"><p>Подробиці</p></a></div>
+            </div>
+
+            <div class="blur_photo"><img src="{% static 'main/img/portfolio_.png' %}" alt=""></div>
+            <div class="photo_2"><img src="{% static 'main/img/portfolio_.png' %}" alt=""></div>
+        </div>
+    </div>
+    <div class="second_block">
+        <div class="container">
+            <div class="about_me">
+                <b class="title">Про мене</b><br>
+                <p class="data_base">У 2007 році в Рівненському державному гуманітарному
+                    університеті отримала диплом магістра за спеціальністю «Прикладна математика», професійна кваліфікація – «Розробник обчислювальних систем та комп’ютерних програм, фахівці в інших галузях обчислень, математики».
+                    З 2007 р. обіймає посаду викладача, викладає дисципліни «Інформатика», «Операційні системи», «Web-технології та web-дизайн», «Тестування програмних систем та комплексів».
+                    Наукові інтереси: інноваційна діяльність та використання засобів ІКТ у підготовці здобувачів освіти, технології інтерактивного та дистанційного навчання....</p>
+                <div class="button_bio"><a href="{% url 'teacher' %}#teach">Моя автобіографія</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="third_block">
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <img class="ico" src="{% static 'main/img/paper.png' %}" alt="">
+                    <div class="card_text">До кожного предмету на сторінці лекції, знаходяться лекційні матеріали за допомогою якого ви зможете повторити пройдений матеріал на онлайн уроці та дізнатися щось нове</div>
+                </div>
+                <div class="card">
+                    <img class="ico" src="{% static 'main/img/ph_hand.png' %}" alt="">
+                    <div class="card_text">Також студенти виконуватимуть контрольні завдання та прикріплювати їх у Class Room, для ведення обліку успішності студентів та вчасно зданого завдання</div>
+                </div>
+                <div class="card">
+                    <img class="ico" src="{% static 'main/img/ph_hand.png' %}" alt="">
+                    <div class="card_text">Також студенти виконуватимуть контрольні завдання та прикріплювати їх у Class Room, для ведення обліку успішності студентів та вчасно зданого завдання</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="certificates">
+        <img class="serct_styly" src="{% static 'main/img/sertificate-1.png' %}" alt="">
+        <img class="serct_styly" src="{% static 'main/img/sertificate-2.png' %}" alt="">
+    </div>
+    <div class="fourth_block">
+        <div class="container">
+            <div class="news">
+                {% for new in news %}
+                <div class="new">
+                    <a href="{{new.get_url}}"><div class="href_new">
+                        <img class="photo_news" src="{{new.photo.url}}" alt="">
+                        <div class="title_new"><b>{{new.title}}</b></div>
+                        <div class="content_new">{{new.content | truncatewords:50}}</div>
+                    </div></a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="button_news"><a href="{% url 'news_main' %}">Новини</a></div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'web_tech/extend_web.html' %}
+{% load static %}
+
+
+{% block title_same_files %}Табличний редактор Microsoft Excel{% endblock %}
+
+{% block content_same_files %}
+    {% with subtitle="Створення WEB-сторінок"%}
+        {% include 'main/DRY.html' %}
+    {% endwith %}
+{% endblock %}   

@@ -1,0 +1,94 @@
+{% extends 'word/index_same_files.html' %}
+{% load static %}
+
+
+{% block diff_style_same_files %}
+<style>
+    .bar_header{
+        width: 100%;
+        height: 100px;
+        background: #338e30;
+    }
+    .menu li:hover >ul > li{
+        background: #8ddf7b;
+    }
+    .footer{
+    background: #1c4d1a;
+    }
+</style>
+{% endblock %}
+
+    {% block name_same_files_1 %}Головна{% endblock %}
+    {% block name_same_files_3 %}Про Excel 2010{% endblock %}
+    {% block name_same_files_2 %}Вступ{% endblock %}
+
+    {% block link_same_files_1 %}{% url 'home' %}{% endblock %}
+    {% block link_same_files_2 %}{% url 'intro_excel' %}{% endblock %}
+    {% block link_same_files_3 %}{% url 'about_excel' %}{% endblock %}
+
+{% block practice_same_files %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".submit_value").click(function(e) {
+            e.preventDefault();
+            var value = $(this).siblings(".input_form").val();
+            var csrf_token = $('input[name="csrfmiddlewaretoken"]').val();
+            $.ajax({
+                type: "POST",
+                url: "{% url 'practice_view' %}",
+                data: {
+                    'value-practice': value,
+                    'csrfmiddlewaretoken': csrf_token,
+                },
+                success: function(data) {
+                    window.location.href = "{% url 'practice_view' %}?practice=" + value;
+                }
+            });
+        });
+    });
+</script>
+{% csrf_token %}
+    <li>
+        <input value="1" name="value-practice" readonly class="input_form">
+        <button type="button" class="submit_value">Практична робота №1</button>
+    </li>
+    <li>
+        <input value="2" name="value-practice" readonly class="input_form">
+        <button type="button" class="submit_value">Практична робота №2</button>
+    </li>
+    <li>
+        <input value="3" name="value-practice" readonly class="input_form">
+        <button type="button" class="submit_value">Практична робота №3</button>
+    </li>
+    <li>
+        <input value="4" name="value-practice" readonly class="input_form">
+        <button type="button" class="submit_value">Практична робота №4</button>
+    </li>
+    <li>
+        <input value="5" name="value-practice" readonly class="input_form">
+        <button type="button" class="submit_value">Практична робота №5</button>
+    </li>
+    <li>
+        <input value="6" name="value-practice" readonly class="input_form">
+        <button type="button" class="submit_value">Практична робота №6</button>
+    </li>
+    <li>
+        <input value="7" name="value-practice" readonly class="input_form">
+        <button type="button" class="submit_value">Практична робота №7</button>
+    </li>
+    <li>
+        <input value="8" name="value-practice" readonly class="input_form">
+        <button type="button" class="submit_value">Практична робота №8</button>
+    </li>
+    
+    <li>
+        <a href="{% url 'control_work1' %}">Контрольна робота №1</a>
+    </li>
+    <li>
+        <a href="{% url 'control_work2' %}">Контрольна робота №2</a>
+    </li>
+
+{% endblock %}
+

@@ -1,0 +1,33 @@
+{% extends 'excel/index_excel.html' %}
+{% load static %}
+
+
+
+{% block title_same_files %}Практична робота {{value}} {% endblock %}
+
+{% block content_same_files %}
+{% if value == '1' %}
+    {% include 'excel/pract_excel/pract_exc_1.html' %}
+
+{% elif value == '2' %}
+    {% include 'excel/pract_excel/pract_exc_2.html' %}
+
+{% elif value == '3' %}
+    {% include 'excel/pract_excel/pract_exc_3.html' %}
+
+{% elif value == '4' %}
+    {% include 'excel/pract_excel/pract_exc_4.html' %}
+
+{% elif value == '5' %}
+    {% include 'excel/pract_excel/pract_exc_5.html' %}
+
+{% elif value == '6' %}
+    {% include 'excel/pract_excel/pract_exc_6.html' %}
+
+{% elif value == '7' %}
+    {% include 'excel/pract_excel/pract_exc_7.html' %}
+
+{% elif value == '8' %}
+    {% include 'excel/pract_excel/pract_exc_8.html' %}
+{% endif %}
+{% endblock %}

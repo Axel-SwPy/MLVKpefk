@@ -1,0 +1,11 @@
+{% extends 'word/index_word.html' %}
+{% load static %}
+
+
+{% block title_same_files %}Текстовий редактор Microsoft Word{% endblock %}
+
+{% block content_same_files %}
+    {% with subtitle="Текстовий редактор Microsoft Word"%}
+        {% include 'main/DRY.html' %}
+    {% endwith %}
+{% endblock %}   

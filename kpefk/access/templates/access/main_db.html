@@ -1,0 +1,11 @@
+{% extends 'access/index_db.html' %}
+{% load static %}
+
+
+{% block title_same_files %}База дaних Access 2010{% endblock %}
+
+{% block content_same_files %}
+    {% with subtitle="База дaних Microsoft Access"%}
+        {% include 'main/DRY.html' %}
+    {% endwith %}
+{% endblock %}   

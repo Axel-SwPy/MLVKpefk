@@ -1,0 +1,37 @@
+{% extends 'word/index_same_files.html' %}
+{% load static %}
+
+
+{% block diff_style_same_files %}
+<style>
+    .bar_header{
+        width: 100%;
+        height: 100px;
+        background: #30628e;
+    }
+    .menu li:hover >ul > li{
+        background: #85b5ef;
+    }
+    .footer{
+    background: #1a3349;
+    }
+</style>
+{% endblock %}
+
+    {% block name_same_files_1 %}Головна{% endblock %}
+    {% block name_same_files_3 %}Про Word 2010{% endblock %}
+    {% block name_same_files_2 %}Вступ{% endblock %}
+
+    {% block link_same_files_1 %}{% url 'home' %}{% endblock %}
+    {% block link_same_files_2 %}{% url 'intro_word' %}{% endblock %}
+    {% block link_same_files_3 %}{% url 'about_word' %}{% endblock %}
+
+{% block practice_same_files %}
+
+        {% for pr in practs%}
+            <li><a href="{{pr.get_content_url}}">{{pr.practice_name}}</a></li>
+        {% endfor %}
+        <li><a href="">Контрольна робота</a></li>
+
+{% endblock %}
+

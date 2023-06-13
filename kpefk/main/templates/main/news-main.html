@@ -1,0 +1,23 @@
+{% extends 'main/index_bar.html' %}
+{% load static %}
+
+
+{% block main_title %}Новини{% endblock %}
+
+{% block main_news %} 
+<div class="fourth_block">
+    <div class="container">
+        <div class="news">
+            {% for new in news %}
+                <div class="new">
+                    <a href="{{new.get_url}}"><div class="href_new">
+                        <img class="photo_news" src="{{new.photo.url}}" alt="">
+                        <div class="title_new"><b>{{new.title}}</b></div>
+                        <div class="content_new">{{new.content | truncatewords:50}}</div>
+                    </div></a>
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends 'excel/index_excel.html' %}
+{% load static %}
+
+
+{% block title_same_files %}Excel 2010{% endblock %}
+
+{% block content_same_files %}
+<div class="container">
+        <div class="intro_content">
+            <div class="title"><b>Загальні відомості про Microsoft Excel 2010</b></div>
+            <div class="title"><b>Інтерфейс Excel</b></div>
+            <div class="title">При першому відкритті Excel з'явиться Початковий екран. Тут Ви можете створити нову робочу книгу, вибрати шаблон або відкрити одну з останніх книг.
+            Знайдіть і відкрийте Порожню книгу на початковому екрані, щоб побачити інтерфейс MS Excel.</div>
+        </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title">Рис. 1.1 – Вкладка "Главная" Стрічки вікна Word 2010</div>
+                    <div class="w_img big"><img src="{% static 'excel/img/1.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title">Перед Вами відкриється інтерфейс програми Microsoft Excel 2010.</div>
+                    <div class="w_img big"><img src="{% static 'excel/img/2.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title"><b>Стрічка</b></div>
+                    <div class="title">Стрічка є основним робочим елементом інтерфейсу MS Excel і містить всі команди, необхідні для виконання найбільш поширених завдань. Стрічка складається з вкладок, кожна з яких містить кілька груп команд.</div>
+                    <div class="w_img"><img src="{% static 'excel/img/3.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title"><b>Панель швидкого доступу</b></div>
+                    <div class="title">Панель швидкого доступу дозволяє отримати доступ до основних команд незалежно від того, яка вкладка Стрічки в даний момент обрано. За умовчанням вона включає такі команди, як Зберегти , Відмінити і Повернути. Ви завжди можете додати будь-які інші команди на розсуд.</div>
+                    <div class="w_img"><img src="{% static 'excel/img/4.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title"><b>Група Команд</b></div>
+                    <div class="title">Кожна група містить блок різних команд. Для застосування команди натисніть на необхідний ярлик. Деякі групи містять стрілку в правому нижньому кутку, натиснувши на яку можна побачити ще більше число команд.</div>
+                    <div class="w_img"><img src="{% static 'excel/img/5.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title"><b>Поле Ім'я</b></div>
+                    <div class="title">Поле Ім'я відображає адресу або ім'я вибраної комірки. Якщо ви уважно подивитеся на зображення нижче, то помітите, що осередок А1 - це перетин стовпця А і рядка 1.</div>
+                    <div class="w_img"><img src="{% static 'excel/img/6.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title"><b>Рядок Формул</b></div>
+                    <div class="title">У рядок формул можна вводити дані, формули і функції, які також з'являться в вибраній комірці. Наприклад, якщо ви оберете осередок C1 і в рядку формул введете число 1985, то точно таке ж значення з'явиться і в самій комірці.</div>
+                    <div class="w_img"><img src="{% static 'excel/img/7.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title"><b>Стовпець</b></div>   
+                    <div class="title">Стовпець - це група осередків, яка розташована вертикально. В Excel стовпці прийнято позначати латинськими літерами. На малюнку нижче виділено стовпець G.</div>
+                    <div class="w_img"><img src="{% static 'excel/img/8.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title"><b>Комірка</b></div>    
+                    <div class="title">Кожен прямокутник в робочій книзі Excel прийнято називати осередком. Осередок є перетином рядка і стовпця. Для того щоб виділити осередок, просто натисніть на неї. Темний контур навколо поточної активної комірки називають табличним курсором . На малюнку нижче обрана осередок G4.</div>
+                    <div class="w_img"><img src="{% static 'excel/img/9.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title"><b>Рядок</b></div>   
+                    <div class="title">Рядок - це група осередків, яка розташована горизонтально. Рядки в Excel прийнято позначати числами. На малюнку нижче виділений рядок 8.</div>
+                    <div class="w_img"><img src="{% static 'excel/img/10.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title"><b>Робочий лист</b></div>    
+                    <div class="title">Файли Excel називають Робочими книгами. Кожна книга складається з одного або декількох листів (вкладки в нижній частині екрана). Їх також називають електронними таблицями. За замовчуванням робоча книга Excel містить всього один лист. Листи можна додавати, видаляти і перейменовувати. Ви можете переходити від одного аркуша до іншого, просто натиснувши на його назву.</div>
+                    <div class="w_img"><img src="{% static 'excel/img/11.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title"><b>Подання листа</b></div>    
+                    <div class="title">Існують три основні режими перегляду листа. Щоб вибрати потрібний режим просто натисніть відповідний ярличок.</div>
+                    <div class="w_img"><img src="{% static 'excel/img/12.png' %}" alt=""></div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="intro_content">
+                    <div class="title">Повернення до нормального режиму обраний за замовчуванням і показує вам необмежену кількість осередків і стовпців.
+                        Розмітка сторінки - ділить лист на сторінки. Дозволяє переглядати документ в тому вигляді, в якому він буде виведений на друк. Також в даному режимі з'являється можливість налаштування колонтитулів.
+                        Сторінковий режим - дозволяє здійснити перегляд і налаштування розривів сторінок перед друком документа. В даному режимі відображається тільки область листа, заповнена даними.</div>
+                    <div class="title"><b>Масштаб</b></div>
+                    <div class="title">Натисніть, утримуйте і наведіть повзунок для налаштування масштабу. Цифри праворуч від регулятора відображають значення масштабу у відсотках.</div>
+                    <div class="w_img"><img src="{% static 'excel/img/13.png' %}" alt=""></div>
+                </div>
+            </div>
+</div>
+{% endblock %}

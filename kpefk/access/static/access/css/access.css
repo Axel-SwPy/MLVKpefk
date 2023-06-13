@@ -1,0 +1,45 @@
+*,
+*:before,
+*:after{
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-size: 24px;  
+}
+.access{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.cont_lesson{
+    width: 1060px;
+    margin: 20px auto;
+    text-align: justify;
+    background: #2e2e2e;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.img_content{
+    width: 1100px;
+    text-align: center;
+}
+.img_db{
+    margin: 10px 0px;
+    width: 80%;
+}
+table{
+    margin: 10px auto;
+}
+table th{
+border: solid 3px rgb(185, 174, 91);
+text-align: center;
+}
+.small{
+    width: 30%;
+    margin: 0 auto;
+}

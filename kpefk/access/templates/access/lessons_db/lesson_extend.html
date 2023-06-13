@@ -1,0 +1,36 @@
+{% extends 'access/index_db.html' %}
+{% load static %}
+
+
+
+{% block title_same_files %}Практична робота {{value_db}} {% endblock %}
+
+{% block content_same_files %}
+{% if value_db == '1' %}
+    {% include 'access/lessons_db/db_lesson_1.html' %}
+
+{% elif value_db == '2' %}
+    {% include 'access/lessons_db/db_lesson_2.html' %}
+
+{% elif value_db == '3' %}
+    {% include 'access/lessons_db/db_lesson_3.html' %}
+
+{% elif value_db == '4' %}
+    {% include 'access/lessons_db/db_lesson_4.html' %}
+
+{% elif value_db == '5' %}
+    {% include 'access/lessons_db/db_lesson_5.html' %}
+
+{% elif value_db == '6' %}
+    {% include 'access/lessons_db/db_lesson_6.html' %}
+
+{% elif value_db == '7' %}
+    {% include 'access/lessons_db/db_lesson_7.html' %}
+
+{% elif value_db == '8' %}
+    {% include 'access/lessons_db/db_lesson_8.html' %}
+
+{% elif value_db == '9' %}
+    {% include 'access/lessons_db/db_lesson_9.html' %}
+{% endif %}
+{% endblock %}

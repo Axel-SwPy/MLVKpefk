@@ -1,0 +1,24 @@
+{% extends 'word/index_word.html' %}
+{% load static %}
+
+
+{% block title_same_files %}{{slug_img}}{% endblock %}
+
+
+{% block content_same_files %}
+<div class="container">
+    <div class="grid_buttons">
+        <a class="grid_but" href=""> Приклад виконання</a>
+        <a class="grid_but" href="{% url 'word_questions' %}">Контрольні запитання</a>
+        <a class="grid_but" href="{% url 'word' %}/{{random_variant}}#UNIC_IMG">Випадковий варіант</a>
+    </div>
+    <div class="btn_grid">
+    {% for variant in list_links_variants %}
+       <a href="{{variant.link_variant}}#UNIC_IMG" class="grid_but">{{variant.name_variant}}</a>
+    {% endfor %}
+    </div>  
+    <div class="block">
+        <div class="w_img" id="UNIC_IMG"><img src="/media/{{choose_variant.img}}" alt=""></div>
+    </div>
+</div>
+{% endblock %}

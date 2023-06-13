@@ -1,0 +1,31 @@
+{% load static %}
+
+
+{% block title_same_files %}Контрольні запитання{% endblock %}
+
+
+{% block content_same_files %}
+<div class="container">
+    <div class="grid_buttons">
+        <div class="grid_but"><a href=""> Приклад виконання</a></div>
+        <div class="grid_but"><a href="{% url 'word_questions' %}"
+                                hx-get="{% url 'word_questions' %}"
+                                hx-target="#content_data_block">Контрольні запитання</a></div>
+        <div class="grid_but"><a href="">Варіанти</a></div>
+    </div>
+    <div class="block">
+        <div class="intro_content">
+            {{practice_per_id}}
+            {% if practice_data %}
+            {% for prac_info in practice_per_id %}
+                {% autoescape off %}
+                <ol>
+                    <div class="task_test">{{prac_info.task}}</div>
+                </ol>
+                {% endautoescape %}
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

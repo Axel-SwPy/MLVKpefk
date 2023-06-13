@@ -1,0 +1,24 @@
+{% extends 'web_tech/extend_web.html' %}
+{% load static %}
+
+
+
+{% block title_same_files %}Практична робота {{value}} {% endblock %}
+
+{% block content_same_files %}
+{% if value == '1' %}
+    {% include 'web_tech/pract_web/web_lesson_1.html' %}
+
+{% elif value == '2' %}
+    {% include 'web_tech/pract_web/web_lesson_2.html' %}
+
+{% elif value == '3' %}
+    {% include 'web_tech/pract_web/web_lesson_3.html' %}
+
+{% elif value == '4' %}
+    {% include 'web_tech/pract_web/web_lesson_4.html' %}
+
+{% elif value == '5' %}
+    {% include 'web_tech/pract_web/web_lesson_5.html' %}
+{% endif %}
+{% endblock %}

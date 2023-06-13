@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block diff_style_same_files %}
+{% endblock %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'word/css/multy.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="{% static 'main/js/htmx.min.js' %}"></script>
+    <title>{% block title_same_files %}{% endblock %}</title>
+</head>
+<body>
+<div class="bar_header">
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="{% url 'home' %}"><b>MELES</b>CHUK<br>
+                <p class="sub_title">ВСП "КПЕФК ЛНТУ"</p></a>
+            </div>
+            <div class="navblock">
+                <ul class="menu">
+                    <li><a href="{% block link_same_files_1 %}{% endblock %}">{% block name_same_files_1 %}{% endblock %}</a></li>
+                    <li><a href="{% block link_same_files_2 %}{% endblock %}">{% block name_same_files_2 %}{% endblock %}</a></li>
+                    <li><a href="{% block link_same_files_3 %}{% endblock %}">{% block name_same_files_3 %}{% endblock %}</a></li>
+                    <li><a>Практикум</a>
+                        <ul>
+                            {% block practice_same_files %} {% endblock %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>  
+<div class="content_data_block" id="content_data_block">
+    {% block content_same_files %}{% endblock %}
+</div>
+{% include 'main/footer.html' %}
+</body>
+</html>

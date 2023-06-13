@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>{% block main_title %} {% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="{% url 'home' %}"><b>MELES</b>CHUK<br>
+                <p class="sub_title">ВСП "КПЕФК ЛНТУ"</p></a>
+            </div>
+            <div class="navblock">
+                <ul class="menu">
+                    <li><a href="{% url 'home' %}">Головна</a></li>
+                    <li><a href="{% url 'teacher' %}">Викладач</a></li>
+                    <li><a>Дисципліни</a>
+                        <ul>
+                            <li><a href="{% url 'informatyka' %}">Інформатика</a>
+                                <ul>
+                                    <li><a href="{% url 'word' %}">Word</a></li>
+                                    <li><a href="{% url 'excel' %}">Exell</a></li>
+                                    <li><a href="{% url 'Access' %}">Access</a></li>
+                                    <li><a href="{% url 'web_technology' %}">WEB-технології</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="{% url 'web_technologies' %}">WEB-технології</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'os' %}">Операційні системи</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {% if user.is_authenticated %}
+                <div class="login"><a href="{% url 'log_out' %}" id="user_name_login" class="register">{{ user.username }}</a></div>
+            {% else %}
+                <div class="login"><a href="{% url 'login_page' %}">Увійти</a></div>
+            {% endif %}
+        </div>
+    </div>
+    {% block main_cont %} 
+    {% endblock %}
+    {% include 'main/footer.html' %}
+</body>
+</html>

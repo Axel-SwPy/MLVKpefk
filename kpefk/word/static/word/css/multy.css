@@ -1,0 +1,392 @@
+body{
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    background: #ffffff;
+    color: #EFF4FF;
+    margin: 0;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #EFF4FF;
+}
+
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+b{
+    font-weight: 700;
+}
+.container{
+    width: 1160px;
+    margin: 0 auto;
+
+    
+}
+
+.header{
+    margin: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+}
+.logo{
+    margin-top: 33px;
+}
+.logo a{
+    font-size: 30px;
+}
+
+.sub_title{
+    font-size: 12px;
+    font-weight: 400;
+    color: #D4C368;
+}
+
+
+.navblock{
+    margin: 30px 0px 0px 320px;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+    position: relative;
+    margin-right: 20px;
+    padding: 0px 20px 0px 20px;
+    margin-top: 10px;
+    z-index: 100;
+}
+
+.menu a{
+    display: block;
+    text-align: center;
+
+}
+.menu a:hover{
+    color: #D4C368;
+    transition: 400ms;
+}
+
+.menu ul{
+    position: absolute;
+    display: none;
+    padding: 0;
+    left: -5px;
+}
+.menu ul a{
+    color: #000;
+    font-size: 14px;
+    padding: 5px 20px 5px 20px;
+    width: 81px;
+}
+.menu li:hover > ul{
+    display: block;
+    z-index: 1;
+}
+.menu li:hover >ul > li{
+
+    width: 120px;
+    height: fit-content;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.menu ul ul{
+    display: none;
+    position: absolute;
+    top: -10px;
+    left: 100%;
+}
+
+.menu li >ul > li:hover{
+    width: 140px;
+    transition: .2s;
+}
+
+.main_block{
+    width: 1160px;
+    margin: 0 auto;
+    height: fit-content;
+    filter: drop-shadow(10px 10px);
+    background: #ffffff;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+.entry_text{
+    width: 1030px;
+    height: fit-content;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 20px 0px 0px 65px;
+    padding-bottom: 20px;
+}
+
+.block{
+    width: 100%;
+    filter: drop-shadow(10px 10px);
+    background: #ffffff;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.intro_content{
+    width: 1120px;
+    margin: 0 auto;
+    padding-top: 10px;
+    color: #000;
+    padding-bottom: 10px;
+}
+.intro_content > p{
+    margin-bottom: 15px;
+}
+.intro_content ul{
+    margin-left: 40px;
+}
+.title > b{
+    font-size: 22px;
+}
+.title{
+    text-align: center;
+    font-size: 18px;
+}
+
+.w_img{
+    text-align: center;
+
+}
+.w_img img{
+    border-radius: 10px;
+}
+
+.big img{
+    width: 80%;
+    border-radius: 10px;
+}
+
+
+/* practice*/
+
+.pract_nav{
+    width: 1160px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.task_test{
+    width: 1060px;
+    margin: 0 auto;
+    line-height: 22px;
+}
+
+.grid_buttons{
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.grid_but{
+    text-align: center;
+    background: #D4C368;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    padding: 15px 30px;
+
+}
+.grid_but:hover{
+    color: #000;
+    transition: .6s;
+}
+
+.btn_grid{
+    width: 1160px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.btn_var{
+    width: 130px;
+    height: 30px;
+    text-align: center;
+    background: #D4C368;
+    border-radius: 30px;
+    padding-top: 12px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.btn_var:hover{
+    color: #000;
+    transition: .6s;
+}
+
+
+.footer{
+    width: 100%;
+    height: 390px;
+    margin-top: 80px;
+    padding-bottom: 15px;
+}
+
+.item_footer{
+    font-size: 14px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.item_footer > p{
+    font-weight: 700;
+}
+
+.footer_grid{
+    padding-top: 20px;
+}
+
+.item_footer a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: #EFF4FF;
+}
+
+
+.input_form, .input_form_access, .input_form_web{
+    position: absolute;
+    display: none;
+}
+
+.submit_value, .submit_value_access, .submit_value_web{
+    background: none;
+    border: none;
+    width: 140px;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    margin-left: -10px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submit_value:hover .submit_value_access:hover .submit_value_web:hover{
+    color: #D4C368;
+    transition: 400ms;
+}
+
+.intro_content > ol{
+    padding-left: 60px;
+}
+
+.img_exc{
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0%);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.img_exc_big{
+    position: relative;
+    width: 70%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0%);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.title_bar_web_lesson{
+    position: relative;
+    height: 40px;
+    background: #905fac;
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px 0px 0px 40px;
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    z-index: 3;
+}
+
+.content_bar_web_lesson{
+    color: #171717;
+    font-family: 'Montserrat', sans-serif;
+    border: #d5c0d6 solid 5px;
+    margin-top: -5px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.sub_bar_title_lesson_web{
+    padding-left: 20px;
+}
+
+.ul_web_lesson{
+    padding-left: 60px;
+}
+
+.ol_web_lesson{
+    padding-left: 60px;
+}
+.li_web_lesson > .ul_web_lesson{
+    padding-left: 30px;
+}
+
+.sub_bar_title_lesson_web{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.text_lessons{
+    padding-left: 5px;
+}
+.li_web_lesson{
+    margin-top: 10px;
+    width: 98%;
+    text-align: justify;
+}
+
+.img_web_lesson{
+    left: 50%;
+    position: relative;
+    transform: translate(-50%);
+    border: solid #9e9e9e;
+    border-radius: 10px;
+}
+
+.help_text_web_lesson{
+    padding-left: 80px;
+    color: #a95cc8;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+
+.explain_photo_word_practice{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+    color: #171717;
+}
+
+.explain_text_word_practice{
+    position: relative;
+    text-align: center;
+    width: 97%;
+}

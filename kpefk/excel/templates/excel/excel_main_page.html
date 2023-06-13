@@ -1,0 +1,11 @@
+{% extends 'excel/index_excel.html' %}
+{% load static %}
+
+
+{% block title_same_files %}Табличний редактор Microsoft Excel{% endblock %}
+
+{% block content_same_files %}
+    {% with subtitle="Табличний редактор Microsoft Excel"%}
+        {% include 'main/DRY.html' %}
+    {% endwith %}
+{% endblock %}   
